@@ -36,10 +36,12 @@
         </li>
       </ul>
       <ul class="gallery"></ul>
+
       <div>
       <input type="text" id="name-input" placeholder="Please enter your name" />
         <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
     </div>
+
     <div>
       <form class="login-form">
         <label>
@@ -53,6 +55,20 @@
         <button type="submit">Log in</button>
       </form>
     </div>
+
+    <div class="widget">
+      <p>Background color: <span class="color">-</span></p>
+      <button type="button" class="change-color">Change color</button>
+    </div>
+
+    <div id="controls">
+      <input type="number" min="1" max="100" step="1" />
+      <button type="button" data-create>Create</button>
+      <button type="button" data-destroy>Destroy</button>
+    </div>
+    
+    <div id="boxes"></div>
+    
       <script src="./js/task-1.js"></script>
       <script src="./js/task-2.js"></script>
       <script src="./js/task-3.js"></script>   
