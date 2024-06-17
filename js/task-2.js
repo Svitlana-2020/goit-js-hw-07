@@ -25,4 +25,20 @@ const images = [
     },
   ];
 
+  const list = document.querySelector('.js-list');
+  function createGallery(array) {
+    const newGallery = array.map(({url, alt}) => {
+    const liEl = document.createElement('li');
+    const imgEl = document.createElement('img');
+
+    imgEl.src = url;
+    imgEl.alt = alt;
+    imgEl.style.width = '360px';
+    imgEl.style.height = '300px';
+
+    liEl.append(imgEl);
+  })
+  list.append(...newGallery);
+  }
+  createGallery(images);
   
