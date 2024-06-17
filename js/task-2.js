@@ -33,12 +33,17 @@ const images = [
 
     imgEl.src = url;
     imgEl.alt = alt;
-    imgEl.style.width = '360px';
-    imgEl.style.height = '300px';
+
+    imgEl.style.width = 'calc((100% - 48px)/3)';
+    imgEl.style.height = 'auto';
+    // imgEl.style.margin = '24px';
 
     liEl.append(imgEl);
+    return liEl;
   })
   list.append(...newGallery);
+  // list.style.display = 'flex';
+
   }
   createGallery(images);
   
