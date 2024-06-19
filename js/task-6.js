@@ -18,16 +18,14 @@ createButton.addEventListener("click", () => {
     });
         
 function createBoxes(amount) {
-    divBoxes.innerHTML = "";
-            for (let i = 0; i < amount; i++) {
-                const newSize = 30 + i * 10;
-                const newDiv = document.createElement('div');
-            newDiv.style.width = `${newSize}px`;
-            newDiv.style.height = `${newSize}px`;
-            newDiv.style.backgroundColor = getRandomHexColor();
-            divBoxes.append(newDiv);
-            console.log(newDiv);
-            }           
+    const array = Array.from({ length: amount });
+const newdivBox = array.map((element, i) => {
+    const newSize = 30 + i * 10;
+    const newColor = getRandomHexColor();
+return `<div style="width: ${newSize}px; height: ${newSize}px; background-color: ${newColor};">
+</div>`
+}).join("");
+divBoxes.innerHTML = newdivBox;         
         }
 
         destroyButton.addEventListener("click", () => {
